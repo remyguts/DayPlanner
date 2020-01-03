@@ -1,3 +1,6 @@
+$(document).ready(function() {
+
+
 var inputForm;
 var saveBtn;
 var twentyFourHours = moment().format('H');
@@ -6,4 +9,4 @@ var currentTimecolor;
 var localStorageGet;
 var localStorageSet;
 
-
+});
