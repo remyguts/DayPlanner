@@ -33,12 +33,19 @@ $(document).ready(function() {
       }).on("click", function() {
         let selector = $(this).attr("id");
 
-        let userInput = $("#" + selector).val();
+        let userInput = $("#" + selector);
         console.log(userInput);
-        localStorage.setItem(selector, userInput);
+        localStorage.setItem(selector, userInput.val());
       })
     ]);
-  }
 
-  
+    var savedInput = localStorage.getItem(inputArrays[i].mtime);
+
+    if (savedInput !== null) {
+     
+
+      let userInput = $("#" + inputArrays[i].mtime);
+      userInput.val(savedInput);
+    }
+  }
 });
