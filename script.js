@@ -24,7 +24,7 @@ $(document).ready(function() {
         placeholder: "",
         "data-time": inputArrays[i].mtime
       }),
-      $("<button>", {
+      $("<button>save</button>", {
         id: inputArrays[i].mtime
       }).on("click", function() {
         let selector = $(this).attr("id");
