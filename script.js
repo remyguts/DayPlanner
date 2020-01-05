@@ -1,11 +1,7 @@
 $(document).ready(function() {
-  var inputForm;
-  var saveBtn;
-  var twentyFourHours = moment().format("HH");
-  var twelveHours = moment().format("h");
-  var currentTimecolor;
-  var localStorageGet;
-  var localStorageSet;
+  
+  var twentyFourHours = parseInt( moment().format("HH") );
+  
   var inputArrays = [
     { rtime: "9am", mtime: 9 },
     { rtime: "10am", mtime: 10 },
@@ -40,12 +36,41 @@ $(document).ready(function() {
     ]);
 
     var savedInput = localStorage.getItem(inputArrays[i].mtime);
-
+    let userInput = $("#" + inputArrays[i].mtime);
     if (savedInput !== null) {
      
 
-      let userInput = $("#" + inputArrays[i].mtime);
+      
       userInput.val(savedInput);
     }
+
+  var currentRowTime = inputArrays[i].mtime;
+
+  
+console.log ( "current time",
+    twentyFourHours
+)
+
+console.log ( "current row time",
+    inputArrays[i].mtime
+)
+if (currentRowTime < twentyFourHours) {
+    console.log ( "past")
+    userInput.addClass ("past")
+    //gray
+
+}
+
+if ( currentRowTime === twentyFourHours) {
+    console.log ("current")
+    userInput.addClass ("present")
+    //red
+}
+
+if ( currentRowTime > twentyFourHours) {
+    console.log ("future")
+    userInput.addClass ("future")
+    //green
+}
   }
 });
