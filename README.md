@@ -12,3 +12,4 @@ To view the Planner itself: https://remyguts.github.io/DayPlanner/
 Help with this project came from Elray, Spencer, and Richard. Thank You 
 Also files referenced from W3 Schools, and Stack Overflow.
 
+![tron](https://user-images.githubusercontent.com/56744605/72193918-68033700-33c0-11ea-8aae-8943158710bb.jpg)
